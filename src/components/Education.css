@@ -1,0 +1,562 @@
+.e_header {
+    display: flex;
+    flex-direction: column;
+    /* Stack the h1 and button vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.078), rgba(0, 0, 0, 0.078));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.e_header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.93);
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    animation: floatText 3s ease-in-out infinite;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+@keyframes floatText {
+
+    0%,
+    100% {
+        transform: rotateX(0deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotateX(15deg) translateY(-10px);
+    }
+}
+
+.header_btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: rotateX(4deg) rotateY(4deg);
+    /* 3D by default */
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* depth shadow */
+    transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.header_btn:hover {
+    background-color: #218838;
+    transform: scale(1.05) rotateX(320deg) rotateY(-360deg);
+    box-shadow: 0 26px 2px rgba(4, 20, 0, 0.778);
+    /* deeper shadow */
+}
+
+
+
+.articles {
+    display: flex;
+    align-items: center;
+    margin-top: 100vh;
+    margin-bottom: 20vh;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 0 20px;
+    scroll-margin-top: -15vh;
+}
+
+.articles h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.articles_items {
+    width: 90vw;
+    height: 70vh;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    margin-right: 5vw;
+    background-color: rgba(15, 15, 15, 0.588);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.articles_items .item1,
+.articles_items .item2,
+.articles_items .item3 {
+    width: 25vw;
+    height: 62vh;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    margin-right: 3vw;
+    margin-bottom: 2vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+
+}
+
+.item_img #img1,
+#img2,
+#img3 {
+    width: 23vw;
+    height: 24vh;
+    margin-top: 0vh;
+    margin-bottom: -1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    z-index: 0;
+}
+
+.item1,
+.item2,
+.item3,
+.item_text {
+    width: 25vw;
+    height: 38vh;
+    margin: 0px;
+    border-radius: 12px;
+    background-color: rgba(33, 33, 33, 0.774);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item1,
+.item2,
+.item3 {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.item_text {
+    background-color: rgba(4, 4, 4, 0.774);
+    border-radius: 12px;
+}
+
+.item_text h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.item_text p {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-left: 2vw;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tips {
+    display: flex;
+    align-items: center;
+    margin-top: 50vh;
+    margin-bottom: 6vh;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.tips h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.tips_items {
+    width: 90vw;
+    height: auto;
+    /* Let content decide height */
+    margin: 1vh 5vw 50vh 2vw;
+    background-color: rgba(15, 15, 15, 0.588);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Add spacing */
+    flex-wrap: wrap;
+    /* In case it overflows on smaller screens */
+}
+
+.tips_item1,
+.tips_item2,
+.tips_item3 {
+    width: 28%;
+    min-width: 250px;
+    /* Responsive limit */
+    height: auto;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tips_item1 {
+    background-color: rgba(235, 6, 6, 0.285);
+}
+
+.tips_item2 {
+    background-color: rgba(6, 235, 6, 0.285);
+}
+
+.tips_item3 {
+    background-color: rgba(6, 6, 235, 0.285);
+}
+
+.tips_item_text h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.tips_item_text p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: justify;
+    padding: 0 10px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services_video_heading {
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+
+.services_video_heading h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+/* Existing styles with minor enhancements for consistency */
+.services_video {
+    width: 90vw;
+    padding: 20px 50px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: rgba(15, 15, 15, 0.588);
+    margin-bottom: 50vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 15px;
+}
+
+.marquee-wrapper_video {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.marquee-track_video {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.item_video_card {
+    min-width: 300px;
+    height: 200px;
+    margin: 0 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video_item_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video_link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.video_label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.video_link:hover .video_item_video {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gov_title {
+    margin-top: 20vh;
+    width: 100%;
+    text-align: center;
+    scroll-margin-top: -10vh;
+}
+
+.gov_title h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.gov_schemes {
+    width: 90vw;
+    margin: 4vh 5vw 100vh 2vw;
+    background-color: rgba(15, 15, 15, 0.588);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.state_gov,
+.central_gov {
+    width: 28%;
+    min-width: 250px;
+    height: 50vh;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.state_gov {
+    margin-right: 5vh;
+}
+
+.central_gov {
+    margin-left: 5vh;
+}
+
+/* Frame holds the image and controls overflow */
+.image_frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Image zoom effect */
+.image_zoom {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 12px;
+}
+
+/* On hover, only image zooms */
+.image_frame:hover .image_zoom {
+    transform: scale(1.08);
+}
+
+/* Text below each image */
+.state_text,
+.central_text {
+    width: 100%;
+    height: 20vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.state_text h3,
+.central_text h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #000;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}

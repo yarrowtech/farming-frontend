@@ -1,0 +1,614 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25vh;
+    /* adjust to center based on your layout */
+}
+
+/* Background Video Element */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* Stack the h1 and button vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.078), rgba(0, 0, 0, 0.078));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.93);
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    animation: floatText 3s ease-in-out infinite;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+@keyframes floatText {
+
+    0%,
+    100% {
+        transform: rotateX(0deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotateX(15deg) translateY(-10px);
+    }
+}
+
+.header_btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: rotateX(4deg) rotateY(4deg);
+    /* 3D by default */
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* depth shadow */
+    transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.header_btn:hover {
+    background-color: #218838;
+    transform: scale(1.05) rotateX(320deg) rotateY(-360deg);
+    box-shadow: 0 26px 2px rgba(4, 20, 0, 0.778);
+    /* deeper shadow */
+}
+
+
+
+
+.introduction {
+    width: 90%;
+    margin-top: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    padding: 3vh;
+    background-color: rgba(41, 38, 38, 0.018);
+    border-radius: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    scroll-margin-top: -15vh;
+    /* so it scrolls into view nicely */
+}
+
+.intro_title h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+
+}
+
+.into_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.intro_img {
+    flex: 1 1 40%;
+    max-width: 500px;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.intro_img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 255, 21, 0.3);
+}
+
+.intro_img video {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.intro_para {
+    flex: 1 1 50%;
+    background-color: rgba(33, 33, 33, 0.774);
+    padding: 20px;
+    border-radius: 18px;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.intro_para:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 255, 21, 0.3);
+}
+
+.intro_para h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1vh;
+    color: #c9e0f8;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 800px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+
+
+
+.wp_container {
+    margin-top: 50vh;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50vh;
+    scroll-margin-top: 25vh;
+    /* so it scrolls into view nicely */
+}
+
+.background_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(60%);
+}
+
+.wp_overlay_content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.wp_title h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.wp_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.weather_box,
+.pest_box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #3cbd33;
+    border-radius: 15px;
+    width: 40%;
+    min-width: 280px;
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+}
+
+.weather_box:hover,
+.pest_box:hover {
+    transform: translateY(-10px);
+}
+
+.weather_box h2,
+.pest_box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 800px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.weather_box p,
+.pest_box p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.wp_btn {
+    background-color: #3cbd33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.wp_btn:hover {
+    background-color: #219019;
+}
+
+.About {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    gap: 2vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    flex-wrap: wrap;
+    scroll-margin-top: -10vh;
+}
+
+.about_info {
+    flex: 1;
+    max-width: 45%;
+    padding: 2rem;
+    background-color: rgba(33, 33, 33, 0.774);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: left;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.about_info:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 255, 229, 0.3);
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+.about_info h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.about_info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.about_img {
+    flex: 1;
+    max-width: 40%;
+    width: 100%;
+    height: 100vh;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about_img:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 8px 30px rgba(0, 255, 229, 0.3);
+}
+
+.about_img .background_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    filter: brightness(90%);
+    transition: filter 0.4s ease;
+}
+
+.about_img:hover .background_video {
+    filter: brightness(96%) saturate(120%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.LoginRegistration {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    padding: 5vh 5vw;
+    margin: 10vh auto;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: rgba(33, 33, 33, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    scroll-margin-top: -17vh;
+    margin-top: 50vh;
+}
+
+.login_form,
+.registration_form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: rgba(33, 33, 33, 0.774);
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.login_form:hover,
+.registration_form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 255, 229, 0.3);
+}
+
+.login_form h2,
+.registration_form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #3cbd33;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 500;
+    color: #c2f5cc;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 255, 229, 0.2);
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 229, 0.4);
+}
+
+form button {
+    padding: 10px;
+    background-color: #3cbd33;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #219019;
+}
+
+
+.contact_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 5vh 5vw;
+    background-color: rgba(33, 33, 33, 0.097);
+    scroll-margin-top: -20vh;
+}
+
+.contact_card {
+    background-color: rgba(33, 33, 33, 0.774);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    width: 100%;
+    color: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 255, 229, 0.2);
+}
+
+.contact_card h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #3cbd33;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 500;
+    color: #c2f5cc;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+    color: white;
+    box-shadow: inset 0 0 5px rgba(0, 255, 229, 0.2);
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 229, 0.4);
+}
+
+form button {
+    padding: 12px;
+    background-color: #3cbd33;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(-1px, -1px);
+    }
+
+    60% {
+        transform: translate(1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Apply vibration on hover for non-text elements */
+form input:hover,
+form button:hover {
+    animation: vibrate 0.3s linear;
+}

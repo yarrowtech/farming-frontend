@@ -1,0 +1,147 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #465154;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* <-- fixed positioning */
+    top: 8px;
+    /* <-- stick to the top */
+    left: 10px;
+    right: 10px;
+    z-index: 1000;
+    /* <-- stay above other content */
+    /* <-- remove margin so it aligns properly */
+    padding: 10px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(47, 46, 46, 0.2);
+    backdrop-filter: blur(10px);
+    /* Optional: adds a blur effect to the background */
+
+}
+
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.navbar-brand:hover {
+    color: #c9e0f8;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1rem;
+    margin-right: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.nav-link:hover {
+    background-color: #dde6ef;
+    border-radius: 5px;
+    color: #303133;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(47, 46, 46, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    color: #2b2c2d;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #dbdee6;
+    color: #232222;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Section Styles */
+div[id^="introduction"],
+div[id^="about"],
+div[id^="registration"],
+div[id^="login"],
+div[id^="contact"] {
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+
+    div[id^="introduction"],
+    div[id^="about"],
+    div[id^="registration"],
+    div[id^="login"],
+    div[id^="contact"] {
+        font-size: 1.2rem;
+        padding: 30px;
+    }
+}

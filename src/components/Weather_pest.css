@@ -1,0 +1,470 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    /* Stack the h1 and button vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.078), rgba(0, 0, 0, 0.078));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10vh;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.93);
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    animation: floatText 3s ease-in-out infinite;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+@keyframes floatText {
+
+    0%,
+    100% {
+        transform: rotateX(0deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotateX(15deg) translateY(-10px);
+    }
+}
+
+
+.header p{
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.93);
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    animation: floatText 3s ease-in-out infinite;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.google_search_form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.google_search_wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-right: 28vw;
+}
+
+.google_search_input {
+  width: 60vw;
+  padding: 1rem;
+  font-size: 16px;
+  color: black;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+ background-color: #fff;
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.google_search_input:focus {
+  box-shadow: 0 1px 6px rgba(60, 64, 67, 0.3),
+              0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#gs_b {
+  position:absolute;
+  margin-left: 39.8vw;
+  top: 38%;
+  transform: translateY(-50%);
+  border: none;
+  background:White;
+  cursor: pointer;
+  padding: 0;
+}
+
+#gs_b img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.6;
+}
+
+
+
+
+
+.search_banner {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 229, 0.2);
+    max-width: 600px;
+    text-align: left;
+    font-family: "Roboto Slab", serif;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.search_banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.search_banner ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #000000;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+/* weather.css */
+.weather-forcast {
+  width: 80vw;
+  margin-top: 15vh;
+  margin-bottom: 55vh;
+  padding: 20px;
+  background: #f5f7f886;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 8vw;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.weather-table {
+  width: 100%;
+  height: 60vh;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.342);
+}
+
+.weather-table th,
+.weather-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.weather-table th {
+  background-color: #4db8ff;
+  color: white;
+}
+
+.weather-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the entire pest alert section */
+.pest_alerts {
+  width: 80vw;
+  margin: 15vh auto 20vh;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f8f579;
+  margin-bottom: 60vh;
+  position: relative; /* 👈 Important to contain the absolute popup */
+}
+
+/* Card containing the form */
+.pest_card {
+  background-color: rgba(127, 124, 124, 0.314);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  max-width: 600px;
+  color: white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pest_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 255, 229, 0.2);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c2f5cc;
+  margin-bottom: 0.3rem;
+}
+
+form textarea {
+  min-height: 120px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: white;
+  resize: vertical;
+  box-shadow: inset 0 0 5px rgba(0, 255, 229, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 229, 0.4);
+  resize: none;
+}
+
+form button {
+  padding: 12px;
+  background-color: #3cbd33;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #35a42d;
+  transform: translateY(-2px);
+}
+
+/* Popup overlay */
+.popup {
+  display: none; /* Hidden by default, shown via JS */
+  position: absolute; /* 👈 Changed from fixed to absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 90%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.4); /* optional background layer */
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup content box */
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #222;
+  position: relative;
+  animation: fadeInScale 0.3s ease;
+}
+
+/* Animation for popup */
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Heading inside popup */
+.popup-content h3 {
+  color: #3cbd33;
+  margin-bottom: 1rem;
+}
+
+/* Text inside popup */
+.popup-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Close (X) button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Optional: make popup responsive */
+@media screen and (max-width: 600px) {
+  .pest_card {
+    padding: 1.5rem;
+  }
+
+  .popup-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.notifications {
+    display: flex;
+    align-items: center;
+    margin-top: 50vh;
+    margin-bottom: 6vh;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.notifications h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.tips_items {
+    width: 90vw;
+    height: auto;
+    /* Let content decide height */
+    margin: 1vh 5vw 50vh 2vw;
+    background-color: rgba(66, 65, 65, 0.588);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Add spacing */
+    flex-wrap: wrap;
+    /* In case it overflows on smaller screens */
+}
+
+.tips_item1,
+.tips_item2,
+.tips_item3 {
+    width: 28%;
+    min-width: 250px;
+    /* Responsive limit */
+    height: auto;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tips_item1 {
+    background-color: rgba(235, 6, 6, 0.285);
+}
+
+.tips_item2 {
+    background-color: rgba(6, 235, 6, 0.285);
+}
+
+.tips_item3 {
+    background-color: rgba(6, 6, 235, 0.285);
+}
+
+.tips_item_text h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.tips_item_text p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: justify;
+    padding: 0 10px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+
+
+
+
